@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="classes">
+  <test name="Test">
+    <classes>
+      <class name="com.tst.test.HomePageTest1"/>
+      <class name="com.tst.test.ProductPageTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)" parallel="classes">
+    <classes>
+      <class name="com.tst.test.ProductPageTest">
+        <methods>
+          <include name="VerifyDressSize"/>
+          <include name="VerifyTweetAndShare"/>
+          <include name="VerifyCount"/>
+          <include name="VerifyDiscription"/>
+        </methods>
+      </class> <!-- com.tst.test.ProductPageTest -->
+      <class name="com.tst.test.HomePageTest1">
+        <methods>
+          <include name="VerifyTshirts"/>
+          <include name="VerifyTabs"/>
+          <include name="VerifyDresses"/>
+          <include name="VerifyAlertMessage"/>
+          <include name="VerifyWomen"/>
+        </methods>
+      </class> <!-- com.tst.test.HomePageTest1 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
